@@ -1,4 +1,7 @@
 class Anmodninger:
+    '''
+    Klassen indeholder atributter og metoder for anmodninger, så underviserens anmodninger kan håndteres af systemet.
+    '''
     def __init__(self, id: int, underviser: str, kursus: str, dato: str, tid: str):
         self.id = id
         self.underviser = underviser

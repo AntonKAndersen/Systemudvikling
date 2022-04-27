@@ -1,4 +1,7 @@
 class Skema:
+    '''
+    Klassen indeholder atributter og metoder for skema, som bruges når en anmodning godkendes og skal ligges ind i skemaet.
+    '''
     def __init__(self, id: int, underviser: str, kursus: str, lokale: str, dato: str, tid: str):
         self.id = id
         self.underviser = underviser
