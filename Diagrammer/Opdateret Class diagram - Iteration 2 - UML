@@ -1,0 +1,131 @@
+skinparam classAttributeIconSize 0
+class UNICAL {
++brugertype: str
++brugernavn: str
++kodeord: str
+--
++getVerificering(): boolean
+}
+
+class Bruger {
++brugernavn: str
++brugerId: int
+--
++new()
++viewBruger()
+}
+
+class Ansat {
++stilling: str
++medarbejdernr: int
++Id: int
+--
++new()
++viewAnsat()
+}
+
+class Underviser {
++fakultet: str
++fornavn: str
++efternavn: str
++kurser: str
++Id: int
+--
++new()
++viewUnderviser()
+}
+
+class Studerende {
++fornavn: str
++efternavn: str
++Studienr: int
++fakultet: str
++studie: str
++årgang: int
++semester: int
+--
++new()
++viewStuderende()
+}
+
+class Administration {
++fakultet: str
++fornavn: str
++efternavn: str
++Id: int
+--
++viewAdministratoin()
+}
+
+class Lokaler {
++kapacitet: int
++lokation: str
++ledighed: boolean
+--
++addLokaler()
++viewLokaler()
+}
+
+class Forespørgsel {
++underviser: str
++lokale: str
++dato: int
++ledighed: boolean
+--
++getData(): boolean
+}
+
+class Godkendelse{
++Anmodningsnr: int
++Underviser: str
++dato: int
++ledighed: boolean
+--
++getGodkendelse(): boolean
+}
+
+class Skema {
++kurser: str
++underviser: str
++dato: int
++tid: int
++lokation: str
+--
++viewSkema()
+}
+
+class Kurser {
++fakultet: str
++underviser: str
++semester: int
++lokation: str
+--
++addKursus()
++viewKursus()
++newKursus()
+}
+
+UNICAL "1" *-- "1*" Bruger
+
+Bruger "1"<|--"0*" Ansat
+
+Ansat "1"<|--"1" Underviser
+Bruger"1"<|-- "1" Studerende
+Ansat "1"<|--"1" Administration
+
+UNICAL "1" *-- "1*" Lokaler
+
+Administration "1"--"0*" Forespørgsel
+Underviser "1"-- "0*" Forespørgsel
+
+Administration "1"-- "0*"Godkendelse
+
+Lokaler "1*" <-- "1" Skema
+
+UNICAL "1"*-- "1*" Kurser
+
+Kurser "1*"*-- "1"Skema
+
+Kurser "1" *-- "1*" Underviser
+
+Kurser "1" *-- "1*" Studerende

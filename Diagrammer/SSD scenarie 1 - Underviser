@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Actor Underviser
+Underviser -> UniCal: Login
+activate UniCal
+UniCal -> Database: Verificer login
+activate Database
+
+alt Succesfuldt login
+    Database --> UniCal: Bruger OK
+    UniCal -> Underviser: Menu til kalender åbnes
+else Bruger ikke fundet
+    Database --> UniCal: Bruger invalid
+    UniCal -> Underviser: "Ugyldigt login, prøv igen"
+    end
+
+Underviser -> UniCal: Udfylder "Lav forespørgsel"
+UniCal -> Database: Lokale ledigt?
+
+alt Lokale ledigt
+    Database --> UniCal: Lokale ledigt
+    UniCal -> Underviser: Viser godkendt booking
+else Lokale ikke ledigt
+    Database --> UniCal: Lokale ikke ledigt
+    deactivate Database
+    UniCal -> Underviser: "Lokalet kan ikke bookes til kursus X, tidspunkt X  "
+    deactivate UniCal
+end
+@enduml

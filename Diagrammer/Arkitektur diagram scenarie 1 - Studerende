@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Actor Studerende
+Studerende -> "User interface": Lede efter skema
+activate "User interface"
+"User interface" -> Webservices: Logge ind og fremsøge data
+activate Webservices
+Webservices -> UniCal: Fremsøge data
+activate UniCal
+UniCal -> Webservices: Sender data
+deactivate UniCal
+Webservices -> "User interface": Viser data
+deactivate Webservices
+"User interface" -> Studerende: Vise skema
+deactivate "User interface"
+
+@enduml

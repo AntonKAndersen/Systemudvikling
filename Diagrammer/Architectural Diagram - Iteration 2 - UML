@@ -1,0 +1,53 @@
+
+package Layer1-Users {
+[Underviser]
+[Studerende]
+[TA's]
+[Administration]
+}
+
+component Layer2-Presentation&logic {
+   [User interface on UNICAL.dk]
+}
+
+
+Component Layer3-Security&integration {
+  [Web Services]
+  [Security services (overholdelse af GDPR)]
+}
+
+
+database Layer4-CommonData {
+  [Database med information om studerendes tilkytning til kurser]
+  [Database med information om undervisere/kursusansvarlige (område og ledighed)]
+
+}
+
+
+package "Layer 5 Decentralized Production System" {
+ [Absalon.ku.dk]
+ [KUnet.ku.dk]
+ [Learn.inside.dtu.dk]
+}
+
+
+
+[Underviser] ..> [User interface on UNICAL.dk]
+[Studerende] ..> [User interface on UNICAL.dk]
+[TA's] ..> [User interface on UNICAL.dk]
+[Administration] ..> [User interface on UNICAL.dk]
+[User interface on UNICAL.dk] ..> [Web Services]
+[Web Services] ..> [Database med information om studerendes tilkytning til kurser]
+[Web Services] ..> [Database med information om undervisere/kursusansvarlige (område og ledighed)]
+[User interface on UNICAL.dk] ..> [Security services (overholdelse af GDPR)]
+
+[Security services (overholdelse af GDPR)] ..> [Database med information om studerendes tilkytning til kurser]
+[Security services (overholdelse af GDPR)] ..> [Database med information om undervisere/kursusansvarlige (område og ledighed)]
+
+[Database med information om studerendes tilkytning til kurser] ..> [Absalon.ku.dk]
+[Database med information om studerendes tilkytning til kurser] ..> [KUnet.ku.dk]
+[Database med information om studerendes tilkytning til kurser] ..> [Learn.inside.dtu.dk]
+
+[Database med information om undervisere/kursusansvarlige (område og ledighed)] ..> [Absalon.ku.dk]
+[Database med information om undervisere/kursusansvarlige (område og ledighed)] ..> [KUnet.ku.dk]
+[Database med information om undervisere/kursusansvarlige (område og ledighed)] ..> [Learn.inside.dtu.dk]

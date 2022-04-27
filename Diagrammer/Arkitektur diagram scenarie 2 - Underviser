@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Actor Underviser
+Underviser -> "User interface": Logge ind som uderviser
+activate "User interface"
+"User interface" -> Webservices: Verificere login og anmode om lokale
+activate Webservices
+Webservices -> UniCal: Anmodning sendes til UniCal
+activate UniCal
+UniCal -> Webservices: Andmodningen registreres i UniCal
+deactivate UniCal
+Webservices -> "User interface": Den succesfulde anmodning vises
+deactivate Webservices
+"User interface" -> Underviser: Skriftlig bekræftelse for anmodning vises
+deactivate "User interface"
+@enduml

@@ -1,0 +1,16 @@
+start
+:UNICAL Homepage;
+:Lokalebooking af underviser;
+repeat
+:Angiv brugernavn og adgangskode;
+:Schedule display;
+  if (Lokaleanmodning) then (no)
+    :Fortsæt display af skema (15 min);
+else (yes)
+:Valg af lokale;
+
+if (Tjekker database for ledighed) then (ledig)
+:Anmodning om lokalebooking sendes til administration;
+else (ikke ledig)
+:Underviser modtager besked om at lokalet er optaget;
+endif

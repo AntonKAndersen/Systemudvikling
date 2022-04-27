@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+Actor Administration
+Administration -> UniCal: Login
+activate UniCal
+UniCal -> Database: Verificer login
+activate Database
+Actor Underviser
+
+alt Succesfuldt login
+    Database --> UniCal: Bruger OK
+    UniCal -> Administration: Menu til kalender åbnes
+else Bruger ikke fundet
+    Database --> UniCal: Bruger invalid
+    UniCal -> Administration: "Ugyldigt login, prøv igen"
+    end
+
+Administration -> UniCal: Tjekker for forespørgelser
+UniCal->Database: Tjekker om forespørgsel er mulig
+
+alt Forespørgsel mulig
+    Database --> UniCal: Booking af lokale mulig
+    UniCal -> Administration: Godkendt forespørgsel
+    Administration -> Database: Godkent forespørgsel \n sendes videre
+    Database -> Underviser: Viser at booking er godkendt
+    activate Underviser
+else Forespørgsel ikke mulig
+    Database --> UniCal: Booking af lokale ikke mulig
+    UniCal -> Administration: Afvist forespørgsel
+    deactivate UniCal
+    Administration -> Database: Afvist forespørgsel \n sendes videre
+    Database -> Underviser: Viser at booking ikke er godkendt
+    deactivate Database
+    deactivate Underviser
+    end
+
+@enduml
