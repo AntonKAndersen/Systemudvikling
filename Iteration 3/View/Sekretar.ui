@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1126</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QTimeEdit" name="tidstart">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>480</y>
+     <width>531</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="specialValueText">
+    <string>Vælg start tidspunkt</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>410</y>
+     <width>511</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="datoValg">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="listSkema">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="godkendBooking">
+   <property name="geometry">
+    <rect>
+     <x>860</x>
+     <y>370</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(255, 255, 255);
+border-radius:3px;
+}
+
+QPushButton:hover {
+background-color: rgb(250, 250, 250);
+}</string>
+   </property>
+   <property name="text">
+    <string>Godkend</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="tidslut">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>510</y>
+     <width>531</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="specialValueText">
+    <string>Vælg slut tidspunkt</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="kursusDropdown">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>540</y>
+     <width>531</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Vælg kursus</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Systemudvikling - Theo exercise</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Systemudvikling - Lecture</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - Forelæsning</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - SAU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - Café</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="lokaleDropdown">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>330</y>
+     <width>531</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Vælg lokale</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Und.lokale - A102, HCØ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Und.lokale - A105, HCØ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Aud. - Lille UP1, DIKU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Aud. - Niels K. Jerne, Panum</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Und.lokale - 13.1.83, Panum</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QCalendarWidget" name="kalenderSekretar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>541</width>
+     <height>321</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="datovalg_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>701</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>26</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Login for administration</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bookLokale">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>570</y>
+     <width>531</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(255, 255, 255);
+border-radius:3px;
+}
+
+QPushButton:hover {
+background-color: rgb(250, 250, 250);
+}</string>
+   </property>
+   <property name="text">
+    <string>Book</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="datoValgS_2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>64</y>
+     <width>451</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Liste over forespørgsler fra undervisere</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listRequest">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>121</y>
+     <width>531</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="afvisBooking">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>370</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(255, 255, 255);
+border-radius:3px;
+}
+
+QPushButton:hover {
+background-color: rgb(250, 250, 250);
+}</string>
+   </property>
+   <property name="text">
+    <string>Afvis</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="lokaleDropdownNyBooking">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>450</y>
+     <width>531</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Vælg lokale</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Und.lokale - A102, HCØ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Und.lokale - A105, HCØ</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Aud. - Lille UP1, DIKU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Aud. - Niels K. Jerne, Panum</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Und.lokale - 13.1.83, Panum</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="datoValgS_3">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>410</y>
+     <width>511</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Lav ny booking</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

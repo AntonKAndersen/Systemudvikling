@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="lavForsporgsel">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>390</y>
+     <width>361</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Lav lokale forespørgelse</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>400</y>
+     <width>511</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="datoValgS">
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Planlagte bookinger d. 21. marts 2022</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="datoIndholdS">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;09 - 12: Systemudvikling - Theo exercise - Und.lokale - A105, HCØ&lt;/p&gt;&lt;p&gt;15 - 17: Systemudvikling - Lecture - Aud. - Lille UP1, DIKU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="datovalg_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>40</y>
+     <width>701</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>26</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Login som underviser</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="lavForsporgselButton">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>530</y>
+     <width>361</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+background-color: rgb(255, 255, 255);
+border-radius:3px;
+}
+
+QPushButton:hover {
+background-color: rgb(250, 250, 250);
+}</string>
+   </property>
+   <property name="text">
+    <string>Lav forespørgsel</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="kursusDropdownForporgsel">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>500</y>
+     <width>361</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Vælg kursus</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Systemudvikling - Theo exercise</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Systemudvikling - Lecture</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - Forelæsning</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - SAU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sygedomslære - Café</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTimeEdit" name="forsporgselSlutTid">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>470</y>
+     <width>361</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="specialValueText">
+    <string>Vælg slut tidspunkt</string>
+   </property>
+  </widget>
+  <widget class="QTimeEdit" name="forsporgselStartTid">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>440</y>
+     <width>361</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="specialValueText">
+    <string>Vælg start tidspunkt</string>
+   </property>
+  </widget>
+  <widget class="QCalendarWidget" name="kalenderUnderviser">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>961</width>
+     <height>281</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
