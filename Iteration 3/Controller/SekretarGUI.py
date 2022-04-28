@@ -1,5 +1,6 @@
 #fra mappen.filen import klassen
 from Model.Skema import Skema
+from Model.Anmodninger import Anmodninger
 from Model.ClassMethods import ClassMethods
 from Controller.Database import Database
 from PyQt6 import QtWidgets, uic
@@ -11,6 +12,11 @@ class SekretarGUI(QtWidgets.QWidget):
         #Loader GUI
         uic.loadUi('View/Sekretar.ui', self)
         self.show()
+
+        req = db.showAnmodninger()
+        for i in req:
+            anmodning = Anmodninger(i[0], i[1], i[2], i[3], i[4])
+            ClassMethods.add_anmodning(anmodning)
 
         #Viser anmodninger
         for a in ClassMethods.get_anmodninger():

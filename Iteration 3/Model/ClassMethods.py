@@ -21,4 +21,13 @@ class ClassMethods(object):
     def get_skema(cls):
         return cls.list_skema
 
+    list_bruger: list = []
+
+    @classmethod
+    def add_bruger(cls, bruger):
+        cls.list_bruger.append(bruger)
+
+    @classmethod
+    def get_bruger(cls):
+        return cls.list_bruger
 

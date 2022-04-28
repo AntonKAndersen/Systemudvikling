@@ -44,7 +44,7 @@
    <property name="orientation">
     <enum>Qt::Vertical</enum>
    </property>
-   <widget class="QLabel" name="datoValgS">
+   <widget class="QLabel" name="datoValg">
     <property name="font">
      <font>
       <pointsize>14</pointsize>
@@ -52,23 +52,14 @@
      </font>
     </property>
     <property name="text">
-     <string>Planlagte bookinger d. 21. marts 2022</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="datoIndholdS">
+   <widget class="QListWidget" name="listSkema">
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>11</pointsize>
      </font>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;09 - 12: Systemudvikling - Theo exercise - Und.lokale - A105, HCØ&lt;/p&gt;&lt;p&gt;15 - 17: Systemudvikling - Lecture - Aud. - Lille UP1, DIKU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
     </property>
    </widget>
   </widget>

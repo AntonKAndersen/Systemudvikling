@@ -88,4 +88,9 @@ class Database:
     myresult = mycursor.fetchone()
     return myresult
 
-
+  def showBruger(self):
+    '''Funktion til at vise alt indhold i tabellen Bruger'''
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM Bruger")
+    myresult = mycursor.fetchall()
+    return myresult
