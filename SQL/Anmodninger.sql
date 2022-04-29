@@ -16,5 +16,4 @@ VALUES
 ('Yaasir','Sygdomslære - Forelæsning','27-04-2022','09:00-12:00');
 
 
-
 select* from Anmodninger

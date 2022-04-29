@@ -6,6 +6,8 @@ class UnderviserGUI(QtWidgets.QWidget):
     def __init__(self):
         super(UnderviserGUI, self).__init__()
         uic.loadUi('View/UnderviserV2.ui', self)
+
+        #Når der trykkes Lav forespørgsel, så køres funktionen forsporgsel_pressed
         self.lavForsporgselButton.clicked.connect(self.forsporgsel_pressed)
         self.show()
 
@@ -32,6 +34,7 @@ class UnderviserGUI(QtWidgets.QWidget):
                 self.listSkema.addItem(f"{a.get_tid()}:  {a.get_kursus()}, {a.get_lokale()}")
 
     def forsporgsel_pressed(self):
+        '''Funktionen indhenter de indsatte oplysninger, dato, tid, kursus og tilføjer det til tabellen Anmodninger i databasen'''
         print('OK')
         dato = self.kalenderUnderviser.selectedDate().toString("dd-MM-yyyy")
         print(dato)
@@ -41,6 +44,13 @@ class UnderviserGUI(QtWidgets.QWidget):
         print(slut_tid)
         kursus = self.kursusDropdownForporgsel.currentText()
         print(kursus)
+
         db = Database()
-        db.addAnmodninger('Hugo', kursus, dato, f'{start_tid}-{slut_tid}')
+        #get_login indsæter brugernavnet på den bruger som er logget in
+        db.addAnmodninger(ClassMethods.get_login()[-1], kursus, dato, f'{start_tid}-{slut_tid}')
+
+        msg = QtWidgets.QMessageBox()
+        msg.setWindowTitle("Forespørgsel")
+        msg.setText("Din forespørgsel er nu afsendt!")
+        msg.exec()
 

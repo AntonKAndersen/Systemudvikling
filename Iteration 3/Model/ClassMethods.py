@@ -31,3 +31,12 @@ class ClassMethods(object):
     def get_bruger(cls):
         return cls.list_bruger
 
+    list_login: list = []
+
+    @classmethod
+    def add_login(cls, login):
+        cls.list_login.append(login)
+
+    @classmethod
+    def get_login(cls):
+        return cls.list_login
