@@ -4,6 +4,7 @@ ID int not null auto_increment, -- anmodningsID er en integer der tæller automa
 brugernavn varchar (50) null, -- accepterer strings på længden op til 50
 adgangskode varchar (50) null, -- accepterer strings på længden op til 50
 brugertype varchar (25) null, -- accepterer datoer som varchar med op til 25 karakterer
+fuldtnavn  varchar (25) null,
 primary key (ID) -- den primære nøgle er ID
 );
 

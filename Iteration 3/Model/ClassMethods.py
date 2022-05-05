@@ -1,6 +1,6 @@
 class ClassMethods(object):
     '''
-    ClassMethods bruges som systemets model og det er her alt fra databasen læses ind når programmet startes.
+    ClassMethods bruges som systemets model og det er her alt fra databasen læses ind i når programmet startes.
     '''
     list_anmodninger: list = []
 
