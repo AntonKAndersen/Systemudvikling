@@ -1,11 +1,8 @@
-from Model.Anmodninger import Anmodninger
 from Model.Skema import Skema
 from Model.Bruger import Bruger
 from Model.ClassMethods import ClassMethods
-from Controller.Database import Database
+from Database import Database
 from PyQt6 import QtWidgets
-from Controller.UnderviserGUI import UnderviserGUI
-from Controller.SekretarGUI import SekretarGUI
 from Controller.LoginGUI import LoginGUI
 import sys
 

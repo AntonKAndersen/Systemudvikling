@@ -3,7 +3,6 @@ class ClassMethods(object):
     ClassMethods bruges som systemets model og det er her alt fra databasen læses ind i når programmet startes.
     '''
     list_anmodninger: list = []
-
     @classmethod
     def add_anmodning(cls,anmodning):
         cls.list_anmodninger.append(anmodning)
@@ -22,7 +21,6 @@ class ClassMethods(object):
         return cls.list_skema
 
     list_bruger: list = []
-
     @classmethod
     def add_bruger(cls, bruger):
         cls.list_bruger.append(bruger)
@@ -32,7 +30,6 @@ class ClassMethods(object):
         return cls.list_bruger
 
     list_login: list = []
-
     @classmethod
     def add_login(cls, login):
         cls.list_login.append(login)

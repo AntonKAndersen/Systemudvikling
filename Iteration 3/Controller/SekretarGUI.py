@@ -2,7 +2,7 @@
 from Model.Skema import Skema
 from Model.Anmodninger import Anmodninger
 from Model.ClassMethods import ClassMethods
-from Controller.Database import Database
+from Database import Database
 from PyQt6 import QtWidgets, uic
 db = Database() #Benytter database klassen
 
@@ -21,7 +21,6 @@ class SekretarGUI(QtWidgets.QWidget):
         #Viser anmodninger
         for a in ClassMethods.get_anmodninger():
             self.listRequest.addItem(f"{a.get_id()}, {a.get_underviser()}, {a.get_kursus()}, {a.get_dato()}, {a.get_tid()}")
-
 
         #Når der er valgt en anmodning fra listen køres funktionen valgt_foresporgsel
         self.listRequest.itemSelectionChanged.connect(self.valgt_foresporgsel)
@@ -88,7 +87,7 @@ class SekretarGUI(QtWidgets.QWidget):
         #Tilføjer booking til Skema tabellen i databasen
         db.addSkema(underviser, kursus, lokale, dato, tid)
 
-        #Tilføjer til skemlisten i ClassMethods, så ændringen kan ses i skema med det samme
+        #Tilføjer til skemalisten i ClassMethods, så ændringen kan ses i skema med det samme
         skema = Skema(1, underviser, kursus, lokale, dato, tid)
         ClassMethods.add_skema(skema)
 

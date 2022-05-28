@@ -1,5 +1,5 @@
 from Model.ClassMethods import ClassMethods
-from Controller.Database import Database
+from Database import Database
 from PyQt6 import QtWidgets, uic
 
 class UnderviserGUI(QtWidgets.QWidget):
@@ -46,9 +46,10 @@ class UnderviserGUI(QtWidgets.QWidget):
         print(kursus)
 
         db = Database()
-        #get_login indsæter brugernavnet på den bruger som er logget in
+        #get_login indsæter brugernavnet på den seneste bruger som er logget in
         db.addAnmodninger(ClassMethods.get_login()[-1], kursus, dato, f'{start_tid}-{slut_tid}')
 
+        #Pop up besked
         msg = QtWidgets.QMessageBox()
         msg.setWindowTitle("Forespørgsel")
         msg.setText("Din forespørgsel er nu afsendt!")

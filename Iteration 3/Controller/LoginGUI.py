@@ -19,12 +19,13 @@ class LoginGUI(QtWidgets.QMainWindow):
 
         for b in ClassMethods.get_bruger():
             if b.get_brugernavn() == brugernavn and b.get_adgangskode() == adgangskode:
-                print('ok')
                 if b.get_brugertype() == 'Underviser':
+                    print('Underviser')
                     ClassMethods.add_login(brugernavn)
                     self.u = UnderviserGUI()
                     self.u.show()
                 elif b.get_brugertype() == 'Admin':
+                    print('Admin')
                     self.s = SekretarGUI()
                     self.s.show()
 
