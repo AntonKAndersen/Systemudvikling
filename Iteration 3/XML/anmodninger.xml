@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<anmodninger>
+  <anmodning>
+    <id>1</id>
+    <underviser>Hugo</underviser>
+    <kursus>Systemudvikling - lecture</kursus>
+    <dato>13-06-2022</dato>
+    <tid>10:15-12:00</tid>
+  </anmodning>
+  <anmodning>
+    <id>2</id>
+    <underviser>Jakob</underviser>
+    <kursus>Systemudvikling - theo exercise</kursus>
+    <dato>13-06-2022</dato>
+    <tid>13:15-15:00</tid>
+  </anmodning>
+  <anmodning>
+    <id>3</id>
+    <underviser>Yaasir</underviser>
+    <kursus>Sygdomslære - forelæsning</kursus>
+    <dato>15-06-2022</dato>
+    <tid>13:15-15:00</tid>
+  </anmodning>
+</anmodninger>

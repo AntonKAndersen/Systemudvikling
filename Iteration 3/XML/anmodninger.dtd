@@ -1,0 +1,29 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT anmodninger (anmodning)+>
+<!ATTLIST anmodninger
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT anmodning (id,underviser,kursus,dato,tid)>
+<!ATTLIST anmodning
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT id (#PCDATA)>
+<!ATTLIST id
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT underviser (#PCDATA)>
+<!ATTLIST underviser
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT kursus (#PCDATA)>
+<!ATTLIST kursus
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT dato (#PCDATA)>
+<!ATTLIST dato
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT tid (#PCDATA)>
+<!ATTLIST tid
+  xmlns CDATA #FIXED ''>
